@@ -4,8 +4,13 @@ public class MultiBrick implements CompositeBlock{
 
     private List<Block> blocks;
 
-    public MultiBrick(List<Block>blocks){
+    private String color;
+    private String material;
+
+    public MultiBrick(List<Block>blocks,String color,String material){
         this.blocks=blocks;
+        this.color=color;
+        this.material=material;
     }
     @Override
     public List<Block> getBlocks() {
@@ -14,11 +19,11 @@ public class MultiBrick implements CompositeBlock{
 
     @Override
     public String getColor() {
-        return null;
+        return color;
     }
 
     @Override
     public String getMaterial() {
-        return null;
+        return material;
     }
 }
